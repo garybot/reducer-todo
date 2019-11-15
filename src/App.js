@@ -12,6 +12,7 @@ function App() {
     <div className="App">
       <AddTodoForm dispatch={dispatch} />
       <TodoList todos={state} dispatch={dispatch} />
+      <button onClick={() => {dispatch({type: "CLEAR_COMPLETED"})}}>Clear Completed</button>
     </div>
   );
 }
