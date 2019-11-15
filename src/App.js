@@ -11,7 +11,7 @@ function App() {
   return (
     <div className="App">
       <AddTodoForm dispatch={dispatch} />
-      <TodoList todos={state} />
+      <TodoList todos={state} dispatch={dispatch} />
     </div>
   );
 }

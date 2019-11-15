@@ -1,10 +1,10 @@
 import React from 'react';
 
 export default function TodoItem(props) {
+  const completed = props.todo.completed ? "line-through red" : "none";
   return (
-    <div>
-      <h3>{props.todo.item}</h3>
-      <button>Complete</button>
-    </div>
+    <li style={{textDecoration: completed}} onClick={() => {props.dispatch({type: "TOGGLE_COMPLETED", payload: props.todo.id})}}>
+      {props.todo.item}
+    </li>
   )
 }

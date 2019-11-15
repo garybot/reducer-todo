@@ -3,13 +3,13 @@ import TodoItem from './TodoItem.js';
 
 const TodoList = (props) => {
   return (
-    <div>
+    <ul>
     {
       props.todos.map(todo => {
-        return <TodoItem key={todo.id} todo={todo} />;
+        return <TodoItem key={todo.id} todo={todo} dispatch={props.dispatch}/>;
       })
     }
-    </div>
+    </ul>
   );
 }
 export default TodoList;
