@@ -7,14 +7,13 @@ const AddTodoForm = (props) => {
   }
   const handleSubmit = evt => {
     evt.preventDefault();
-    const newTodo = {"item": newItem, id: Date.now(), completed: false};
-    props.dispatch({ type: "ADD_TODO", payload: newTodo });
+    props.dispatch({ type: "ADD_TODO", payload: newItem });
   }
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <label htmlFor="item">Add Todo: </label>
       <input type="text" name="item" id="item" placeholder="What to do?" value={newItem.item} onChange={handleChange}/>
-      <button type="submit" onClick={handleSubmit}>Add Item</button>
+      <button type="submit">Add Item</button>
     </form>
   )
 }
