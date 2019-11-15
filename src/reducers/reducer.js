@@ -1,6 +1,6 @@
 
 
-export const intialState = [
+export const initialState = [
   {
     item: 'Learn about reducers',
     completed: false,
